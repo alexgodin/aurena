@@ -17,6 +17,7 @@ var Paths = {
   HTML                 : './index.html',
   TO_GH_PAGES          : './dist/**/**',
   DIST                 : 'dist',
+  DIST_IMG             : 'dist/img',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   LESS_TOOLKIT_SOURCES : './less/toolkit*',
   LESS                 : './less/**/**',
@@ -37,12 +38,13 @@ var Paths = {
     ]
 }
 
-gulp.task('default', ['less-min', 'js-min', 'copy-html'])
+gulp.task('default', ['less-min', 'js-min', 'copy-html', 'img'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less-min']);
   gulp.watch(Paths.JS,   ['js-min']);
   gulp.watch(Paths.HTML, ['copy-html']);
+  gulp.watch(Paths.IMG, ['img']);
 })
 
 gulp.task('docs', ['server'], function () {
@@ -69,7 +71,7 @@ gulp.task('less', function () {
 
 gulp.task('img', function (){
   return gulp.src(Paths.IMG)
-  .pipe(gulp.dest(concat(Paths.DIST,"/img")))
+  .pipe(gulp.dest(Paths.DIST_IMG))
 })
 
 gulp.task('less-min', ['less'], function () {
