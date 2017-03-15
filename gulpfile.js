@@ -13,11 +13,13 @@ var ghPages      = require('gulp-gh-pages');
 
 var Paths = {
   IMG                  : './img/**',
+  FONTS                : './fonts/**',
   HERE                 : './',
   HTML                 : './index.html',
   TO_GH_PAGES          : './dist/**/**',
   DIST                 : 'dist',
   DIST_IMG             : 'dist/img',
+  DIST_FONTS           : 'dist/fonts',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   LESS_TOOLKIT_SOURCES : './less/toolkit*',
   LESS                 : './less/**/**',
@@ -38,7 +40,7 @@ var Paths = {
     ]
 }
 
-gulp.task('default', ['less-min', 'js-min', 'copy-html', 'img'])
+gulp.task('default', ['less-min', 'js-min', 'copy-html', 'img','fonts'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less-min']);
@@ -72,6 +74,11 @@ gulp.task('less', function () {
 gulp.task('img', function (){
   return gulp.src(Paths.IMG)
   .pipe(gulp.dest(Paths.DIST_IMG))
+})
+
+gulp.task('fonts', function (){
+  return gulp.src(Paths.FONTS)
+  .pipe(gulp.dest(Paths.DIST_FONTS))
 })
 
 gulp.task('less-min', ['less'], function () {
