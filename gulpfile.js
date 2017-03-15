@@ -9,10 +9,13 @@ var concat       = require('gulp-concat')
 var uglify       = require('gulp-uglify')
 var connect      = require('gulp-connect')
 var open         = require('gulp-open')
+var ghPages      = require('gulp-gh-pages');
 
 var Paths = {
+  IMG                  : './img/**',
   HERE                 : './',
   HTML                 : './index.html',
+  TO_GH_PAGES          : './dist/**/**',
   DIST                 : 'dist',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   LESS_TOOLKIT_SOURCES : './less/toolkit*',
@@ -64,6 +67,11 @@ gulp.task('less', function () {
     .pipe(gulp.dest('dist'))
 })
 
+gulp.task('img', function (){
+  return gulp.src(Paths.IMG)
+  .pipe(gulp.dest(concat(Paths.DIST,"/img")))
+})
+
 gulp.task('less-min', ['less'], function () {
   return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
     .pipe(sourcemaps.init())
@@ -95,4 +103,9 @@ gulp.task('js-min', ['js'], function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest(Paths.DIST))
+})
+
+gulp.task('deploy',function() {
+    return gulp.src(Paths.TO_GH_PAGES)
+    .pipe(ghPages({force: true}));
 })
