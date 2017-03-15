@@ -11,7 +11,7 @@ We're glad you're here.
 
 *For bootstrap/theme documentation run `gulp docs`*
 *To compile run `gulp`*
-*To deploy to github pages run `gulp deploy`*
+*To deploy to github pages run `gulp deploy` (note this will deploy as of your most recent compile)*
 
 # Layout
 
@@ -44,8 +44,8 @@ toolkit/
       └── toolkit.min.js
 ```
 
-# Github pages DNS
-TODO include this?
+# Using a custom domain with github pages
+[https://help.github.com/articles/using-a-custom-domain-with-github-pages/](click here for amazingly detailed instructions about setting up custom domains)
 
 # Changing themes and customization
 TODO how to do this?
