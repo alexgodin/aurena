@@ -2,7 +2,7 @@
 
 We're glad you're here.
 
-#Getting started
+# Getting started
 
 1. Fork this repo
 1.5 Clone your fork
@@ -12,7 +12,7 @@ We're glad you're here.
 5. To compile run `gulp`
 6. To deploy to github pages run `gulp deploy`
 
-#Layout
+# Layout
 
 ```
 toolkit/
@@ -43,11 +43,11 @@ toolkit/
       └── toolkit.min.js
 ```
 
-#Github pages DNS
+# Github pages DNS
 TODO include this?
 
-#Changing themes and customization
+# Changing themes and customization
 TODO how to do this?
 
-#Livereload and local development
+# Livereload and local development
 TODO how to do this?
