@@ -5,12 +5,13 @@ We're glad you're here.
 # Getting started
 
 1. Fork this repo
-1.5 Clone your fork
-2. Install node on your machine
-3. Run `npm install` from within the project
-4. For bootstrap/theme documentation run `gulp docs`
-5. To compile run `gulp`
-6. To deploy to github pages run `gulp deploy`
+2. Clone your fork
+3. Install node on your machine
+4. Run `npm install` from within the project
+
+*For bootstrap/theme documentation run `gulp docs`*
+*To compile run `gulp`*
+*To deploy to github pages run `gulp deploy`*
 
 # Layout
 
