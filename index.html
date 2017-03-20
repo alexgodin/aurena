@@ -60,6 +60,7 @@
 </div>
 
 <!-- START OF MODAL EXAMPLE -->
+  
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -68,29 +69,27 @@
           <h4 class="modal-title" id="exampleModalLabel">Tell us about yourself</h4>
         </div>
         <div class="modal-body">
-          
-          <div id="form-error" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span id="form-error-text"></span></div>
-
           <form id="signup-form">
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Name</label>
-              <input id="name" type="text" class="form-control" id="recipient-name">
+            <div id="form-error" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span id="form-error-text"></span></div>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Name</label>
+                  <input id="name" type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Email</label>
+                  <input id="email" type="email" class="form-control" id="recipient-email">
+                </div>
             </div>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Email</label>
-              <input id="email" type="email" class="form-control" id="recipient-email">
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <input type="submit" value="Join" class="btn btn-primary" id="sendInfoToMixpanel"></input>
             </div>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="sendInfoToMixpanel">Send message</button>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- END OF MODAL EXAMPLE -->
+<!-- END OF MODAL EXAMPLE -->
 
 <!-- START OF ALERT -->
   <div id="form-success" style="display:none" class="alert alert-success alert-dismissible fade in alert-fixed-top" role="alert">

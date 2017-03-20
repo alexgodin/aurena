@@ -6,8 +6,9 @@ mixpanel.init("c3b32002e630a0d0ebd58357456e5f30");
 
 $( document ).ready(function() {
 
-	$('#sendInfoToMixpanel').click(function(event) {
-
+	$('#signup-form').submit(function(event) {
+		// prevent default browser behaviour
+  		event.preventDefault();
 		// Grab all inputs
 		var email = $('#email').val()
 		var name = $('#name').val()
@@ -22,7 +23,6 @@ $( document ).ready(function() {
 			});
 			$('#myModal').modal('hide')
 			$('#form-success').show();
-
 			// Show alert for three seconds then disappear.
 			setTimeout(function(){
 				$('#form-success').fadeOut();
