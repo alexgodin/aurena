@@ -22,6 +22,11 @@ $( document ).ready(function() {
 			});
 			$('#myModal').modal('hide')
 			$('#form-success').show();
+
+			// Show alert for three seconds then disappear.
+			setTimeout(function(){
+				$('#form-success').fadeOut();
+			}, 3000)
 		} else {
 			return false
 		}
