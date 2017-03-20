@@ -15,15 +15,14 @@ var Paths = {
   IMG                  : './img/**',
   FONTS                : './fonts/**',
   HERE                 : './',
-  HTML                 : './index.html',
+  HTML                 : './*.html',
   TO_GH_PAGES          : './dist/**/**',
   DIST                 : 'dist',
   DIST_IMG             : 'dist/img',
   DIST_FONTS           : 'dist/fonts',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
-  LESS_TOOLKIT_SOURCES : './less/toolkit*',
   LESS                 : './less/**/**',
-  JS                   : [
+  TOOLKIT_JS           : [
       './js/bootstrap/transition.js',
       './js/bootstrap/alert.js',
       './js/bootstrap/affix.js',
@@ -36,40 +35,26 @@ var Paths = {
       './js/bootstrap/popover.js',
       './js/bootstrap/scrollspy.js',
       './js/bootstrap/tab.js',
-      './js/custom/*'
-    ]
+      './js/toolkit/*'
+    ],
+    CUSTOM_JS          : './js/custom/*'
 }
 
-gulp.task('default', ['less-min', 'js', 'copy-html', 'img','fonts'])
+gulp.task('default', ['less', 'js', 'html', 'img','fonts'])
 
 gulp.task('watch', function () {
-  gulp.watch(Paths.LESS, ['less-min']);
-  gulp.watch(Paths.JS,   ['js']);
-  gulp.watch(Paths.HTML, ['copy-html']);
+  gulp.watch(Paths.LESS, ['less']);
+  gulp.watch(Paths.CUSTOM_JS,   ['toolkit-js']);
+  gulp.watch(Paths.TOOLKIT_JS,   ['custom-js']);
+  gulp.watch(Paths.HTML, ['html']);
   gulp.watch(Paths.IMG, ['img']);
 })
 
-gulp.task('docs', ['server'], function () {
-  gulp.src(__filename)
-    .pipe(open({uri: 'http://localhost:9001/docs/'}))
-})
+//***************//
+// MOVE ASSETS INTO DIST
+//***************//
 
-gulp.task('server', function () {
-  connect.server({
-    root: 'docs',
-    port: 9001,
-    livereload: true
-  })
-})
-
-gulp.task('less', function () {
-  return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write(Paths.HERE))
-    .pipe(gulp.dest('dist'))
-})
+gulp.task('assets',['img','fonts','html'])
 
 gulp.task('img', function (){
   return gulp.src(Paths.IMG)
@@ -81,38 +66,73 @@ gulp.task('fonts', function (){
   .pipe(gulp.dest(Paths.DIST_FONTS))
 })
 
-gulp.task('less-min', ['less'], function () {
-  return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(minifyCSS())
-    .pipe(autoprefixer())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(sourcemaps.write(Paths.HERE))
-    .pipe(gulp.dest(Paths.DIST))
-})
-
-gulp.task('copy-html', function () {
+gulp.task('html', function () {
   return gulp.src(Paths.HTML)
     .pipe(gulp.dest(Paths.DIST))
 })
 
-gulp.task('js', function () {
-  return gulp.src(Paths.JS)
-    .pipe(concat('toolkit.js'))
+//***************//
+//DEAL WITH JS
+//***************//
+
+gulp.task('js', ['toolkit-js','custom-js'])
+
+gulp.task('toolkit-js', function () {
+  return gulp.src(Paths.TOOLKIT_JS)
+  .pipe(concat('toolkit.js'))
+  .pipe(gulp.dest(Paths.DIST))
+})
+
+gulp.task('custom-js', function () {
+  return gulp.src(Paths.CUSTOM_JS)
+    .pipe(concat('custom.js'))
     .pipe(gulp.dest(Paths.DIST))
 })
 
-gulp.task('js-min', ['js'], function () {
-  return gulp.src(Paths.DIST_TOOLKIT_JS)
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+
+//***************//
+//DEAL WITH LESS
+//***************//
+
+gulp.task('less', function () {
+  return gulp.src('./less/master.less')
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(Paths.DIST))
 })
+
+
+// gulp.task('less-min', ['less'], function () {
+//   return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
+//     .pipe(sourcemaps.init())
+//     .pipe(less())
+//     .pipe(minifyCSS())
+//     .pipe(autoprefixer())
+//     .pipe(rename({
+//       suffix: '.min'
+//     }))
+//     .pipe(sourcemaps.write(Paths.HERE))
+//     .pipe(gulp.dest(Paths.DIST))
+// })
+
+gulp.task('server', function () {
+  connect.server({
+    root: './dist',
+    port: 9001,
+    livereload: true
+  })
+})
+
+// gulp.task('js-min', ['js'], function () {
+//   return gulp.src(Paths.DIST_TOOLKIT_JS)
+//     .pipe(uglify())
+//     .pipe(rename({
+//       suffix: '.min'
+//     }))
+//     .pipe(gulp.dest(Paths.DIST))
+// })
 
 gulp.task('deploy',function() {
     return gulp.src(Paths.TO_GH_PAGES)
