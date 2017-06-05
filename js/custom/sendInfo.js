@@ -12,6 +12,7 @@ $( document ).ready(function() {
 		// Grab all inputs
 		var email = $('#email').val()
 		var name = $('#name').val()
+		var dna = $('#dna').is(':checked')
 
 		if (validateForm(email, name)){
 			var distinctId = mixpanel.get_distinct_id()
@@ -19,7 +20,8 @@ $( document ).ready(function() {
 	        // Set user attributes for mixpanel DB
 			var response = mixpanel.people.set({
 			    "$name": name,
-			    "$email": email
+			    "$email": email,
+			    "$dna": dna
 			});
 			$('#myModal').modal('hide')
 			$('#form-success').show();

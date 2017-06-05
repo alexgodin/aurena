@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- These meta tags come first. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Bootstrap Theme Example</title>
-
-    <!-- Include the CSS (if you are using a different theme, change the name i.e. toolkit-startup.min.css)-->
-    <link href="master.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="toolkit.js"></script>
-    <script src="custom.js"></script>
-  </head>
-  <body>
-<div class="stage-shelf hidden" id="sidebar">
-  <ul class="nav nav-bordered nav-stacked">
-    <li class="nav-header"><small>Examples</small></li>
-    <li class="active">
-      <a href="./bold/index.html">Bold</a>
-    </li>
-    <li>
-      <a href="./index.html">Startup</a>
-    </li>
-    <li>
-      <a href="./minimal/index.html">Minimal</a>
-    </li>
-
-    <li class="nav-divider"></li>
-
-    <li class="nav-header"><small>Sections</small></li>
-
-    <li>
-      <a href="#grid" data-target="#stage" data-toggle="stage">Grid</a>
-    </li>
-    <li>
-      <a href="#chainz" data-target="#stage" data-toggle="stage">2 Chainz</a>
-    </li>
-    <li>
-      <a href="#pricing" data-target="#stage" data-toggle="stage">Pricing</a>
-    </li>
-    <li>
-      <a href="#footer" data-target="#stage" data-toggle="stage">About</a>
-    </li>
-
-    <li class="nav-divider"></li>
-
-    <li class="nav-header"><small>Docs</small></li>
-
-    <li>
-      <a href="./docs/index.html">Theme</a>
-    </li>
-    <li>
-      <a href="http://getbootstrap.com">Bootstrap</a>
-    </li>
-
-  </ul>
-</div>
-
+<html>
+<head>
+  <!-- These meta tags come first. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurena Labs</title>
+  <!-- Include the CSS (if you are using a different theme, change the name i.e. toolkit-startup.min.css)-->
+  <link href="master.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="toolkit.js"></script>
+  <script src="custom.js"></script>
+</head>
+<body>
 <!-- START OF MODAL EXAMPLE -->
-  
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header text-center">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="exampleModalLabel">Tell us about yourself</h4>
+          <h1><span class="h4">&#036;</span>100<span class="h4">/mo</span></h1>
+          <h3 class="m-t-0">Get started with this special limited time offer.</h3>
         </div>
         <div class="modal-body">
           <form id="signup-form">
@@ -79,6 +33,9 @@
                   <label for="recipient-name" class="control-label">Email</label>
                   <input id="email" type="email" class="form-control" id="recipient-email">
                 </div>
+                <div class="form-group">
+                 <input type="checkbox" name="dna" class="dna-checkbox" id="dna"> <label for="dna" class="dna-label">Please personalize my nutrition with a DNA test and boosters.<br><em>(additional $50)</em></label>
+                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -88,7 +45,6 @@
       </div>
     </div>
   </div>
-
 <!-- END OF MODAL EXAMPLE -->
 
 <!-- START OF ALERT -->
@@ -96,358 +52,95 @@
   <strong>Thanks!</strong> We've added you to our waitlist.</div>
 <!-- END OF ALERT -->
 
-<div class="stage" id="stage">
-
-  <div class="block block-fill-height app-block-wayne"
-       style="background-image: url(./img/lilwayne.jpg)">
-
-    <button class="btn btn-link stage-toggle" data-target="#stage" data-toggle="stage">
-      <span class="icon icon-menu stage-toggle-icon"></span>
-      Menu
-    </button>
-
-    <div class="block-sm-middle block-xs-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <h1 class="block-title m-b-md">
-              <span class="text-ribbon text-ribbon-primary">
-                <span>Signal. Mining.</span>
-              </span>
-            </h1>
-            <p class="lead">
-              <span class="text-ribbon text-ribbon-primary">
-                <span>
-                  Live recordings of your favorite artists before their hit albums drop.
-                </span>
-              </span>
-            </p>
-             <!-- BUTTON TO TRIGGER MODAL. Edit data-target attribute to open different modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="">Sign Up</button>
-          </div>
+<div class="block block-inverse app-header p-t-0"
+style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/runningman.png);">
+  <nav class="navbar navbar-transparent p-t hidden-md hidden-sm hidden-xs m-b-0">
+    <!-- <div class="container-fluid"></div>     -->
+    <div class="col-xs-1 p-r-lg">  
+      <img src="./img/logo.png" class="w-full">
+    </div>
+    <div class="col-xs-1 col-xs-offset-7 text-center">
+      <a href="#two" class="text-uppercase">The system</a>
+    </div>
+    <div class="col-xs-1  text-center">
+      <a href="#four" class="text-uppercase">About</a>
+    </div>
+    <div class="col-xs-1 text-center">
+      <a data-toggle="modal" data-target="#myModal" class="text-uppercase">Get started</a>
+    </div>
+  </nav>
+  <div class="row text-center m-b-lg m-t-md">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="row m-b">
+        <div class="col-xs-2 col-xs-offset-5 p-md">
+          <img src="./img/logo.png" class="w-full">
         </div>
       </div>
+      <h1>This is a five word headline.</h1>
+      <p class="lead">This is a one hundred and thirty-five character subhead. It talks about how there's no whey our protein is so good. You'll love it.</p>
+      <button type="button" class="btn btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
     </div>
+  </div> 
+  <div class="app-down">
+      <a href="#two">
+      <img src="./img/downarrow.png" width="40px">
+      </a>
   </div>
-
-
-  <div class="block block-inverse block-transparent p-y-0 app-block-grid">
-
-    <div class="block-bg-clip">
-      <div class="block-bg">
-        <div class="block-bg-img"></div>
-      </div>
-    </div>
-
-    <div class="container" id="grid">
-      <div class="row">
-        <div class="col-lg-4 col-sm-6">
-          <div class="row m-b">
-            <div class="col-lg-12">
-              <div class="panel panel-bold panel-danger m-b-0 app-box-shadow">
-                <img src="./img/azalea.jpg">
-                <div class="panel-body p-b-lg">
-                  <h4 class="m-b-0">Iggy Azalea</h4>
-                  <p class="text-serif"><em>Released on Dropp 6 weeks early</em></p>
-                  <hr>
-                  <p class="text-serif"><em>Ms. Azalea was the first artist to reach out to Dropp to coordinate her leak. We knew it was going to be the largest unofficial album drop in history. We doubled server capacity and made a lot ton of coffee.</em></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row m-b hidden-xs">
-            <div class="col-lg-12">
-              <img src="./img/minaj.jpg">
-           </div>
-          </div>
-        </div>
-        <div class="col-lg-8 col-sm-6">
-          <div class="row">
-            <div class="col-lg-6 m-b">
-              <div class="app-box-shadow">
-                <img src="./img/childish.jpg">
-              </div>
-            </div>
-            <div class="col-lg-6 m-b">
-              <div class="app-box-shadow">
-                <img src="./img/yeezus.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="row hidden-xs">
-            <div class="col-lg-12">
-              <img src="./img/cudi.jpg">
-           </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="block block-fill-height block-transparent block-angle app-block-chainz" id="chainz">
-
-    <div class="block-bg-clip">
-      <div class="block-bg">
-        <div class="block-bg-img block-bg-img-top"
-             style="background-image: url(./img/2chainz.jpg)">
-        </div>
-      </div>
-    </div>
-
-    <div class="block-sm-middle block-xs-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 col-sm-offset-7">
-            <h1 class="block-title m-b-md">
-              <span class="text-ribbon text-ribbon-primary">
-                <span>Hand Picked.</span>
-              </span>
-            </h1>
-            <p class="lead">
-              <span class="text-ribbon text-ribbon-primary">
-                <span>
-                  Every album, song, and video we leak is the very best in class.
-                </span>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="block block-fill-height block-transparent block-inverse block-angle app-block-kanye">
-    <div class="block-bg-clip">
-      <div class="block-bg">
-        <div class="block-bg-img block-bg-img-top"
-             style="background-image: url(./img/kanye.jpg)">
-        </div>
-      </div>
-    </div>
-
-    <div class="block-xs-middle">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <h1 class="block-title m-b-md">
-              <span class="text-ribbon">
-                <span>Music Videos.</span>
-              </span>
-            </h1>
-            <p class="lead">
-              <span class="text-ribbon">
-                <span>
-                  We stream all leaks alongside music videos cause we don't play games.
-                </span>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="row m-b-lg">
-          <div class="col-sm-8">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe width="682" height="384" src="https://www.youtube.com/embed/Bm5iA4Zupek?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="block block-transparent block-fill-height block-angle block-app-mosdef">
-    <div class="block-bg-clip">
-      <div class="block-bg">
-        <div class="block-bg-img block-bg-img-top"
-             style="background-image: url(./img/mosdef.jpg)">
-        </div>
-      </div>
-    </div>
-
-    <div class="block-xs-middle">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-6">
-            <h1 class="block-title m-b-md">
-              <span class="text-ribbon text-ribbon-primary">
-                <span>Sign up now.</span>
-              </span>
-            </h1>
-
-            <div class="text-ribbon-inputs-split">
-              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Name">
-              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Email">
-            </div>
-            <input type="text" class="h4 text-ribbon-input text-ribbon-input-half text-ribbon-primary" placeholder="Promo code">
-            <button type="button" class="btn btn-square btn-primary btn-lg btn-block">
-              Get the beta early
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="block block-fill-height block-inverse app-block-nicki"
-       style="background-image: url(./img/nicki.jpg)"
-       id="pricing">
-    <div class="block-xs-middle">
-      <div class="container">
-        <div class="row m-b-md">
-          <div class="col-lg-5">
-            <h1 class="block-title m-b-md">
-              <span class="text-ribbon">
-                <span>Easy Pricing.</span>
-              </span></h1>
-            <p class="lead">
-              <span class="text-ribbon text-muted">
-                <span>
-                  One yearly payment of $99 and get unlimited leaked tracks.
-                </span>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="panel">
-              <div class="panel-body">
-                <h3 class="panel-title">Basic Trial</h3>
-                <h4 class="text-muted text-serif m-t-0 m-b">
-                  <em>$0/yr</em>
-                </h4>
-                <p class="text-serif m-b">
-                  <em>
-                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
-                  </em>
-                </p>
-                <hr>
-                <ul class="iconlist text-serif m-b-md">
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Unlimited streaming</em>
-                  </li>
-                  <li>
-                    <span class="icon icon-cross"></span>
-                    <em>Day of leak access</em>
-                  </li>
-                  <li>
-                    <span class="icon icon-cross"></span>
-                    <em>Offline sync</em>
-                  </li>
-                </ul>
-                <button class="btn btn-default btn-square btn-block btn-lg">Start a basic trial</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="panel accent-primary">
-              <div class="panel-body">
-                <h3 class="panel-title">Anual Access</h3>
-                <h4 class="text-primary text-serif m-t-0 m-b">
-                  <em>$99/yr</em>
-                </h4>
-                <p class="text-serif m-b">
-                  <em>
-                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
-                  </em>
-                </p>
-                <hr>
-                <ul class="iconlist text-serif m-b-md">
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Unlimited streaming</em>
-                  </li>
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Day of leak access</em>
-                  </li>
-                  <li>
-                    <span class="icon icon-cross"></span>
-                    <em>Offline sync</em>
-                  </li>
-                </ul>
-                <button class="btn btn-primary btn-square btn-block btn-lg">Start a basic trial</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="panel">
-              <div class="panel-body">
-                <h3 class="panel-title">Celebrity Look</h3>
-                <h4 class="text-muted text-serif m-t-0 m-b">
-                  <em>$299/yr</em>
-                </h4>
-                <p class="text-serif m-b">
-                  <em>
-                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
-                  </em>
-                <hr>
-                <ul class="iconlist text-serif m-b-md">
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Unlimited streaming</em>
-                  </li>
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Day of leak access</em>
-                  </li>
-                  <li class="active">
-                    <span class="icon icon-check"></span>
-                    <em>Offline sync</em>
-                  </li>
-                </ul>
-                <button class="btn btn-default btn-square btn-block btn-lg">Start a basic trial</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="block block-inverse accent-primary" id="footer">
-    <div class="container">
-      <div class="row text-serif">
-        <div class="col-sm-2 m-b-md">
-          <ul class="list-unstyled list-spaced">
-            <li><h4>Tech</h4></li>
-            <li class="text-muted"><em>Overview</em></li>
-            <li class="text-muted"><em>Design</em></li>
-            <li class="text-muted"><em>Display</em></li>
-            <li class="text-muted"><em>Technology</em></li>
-          </ul>
-        </div>
-        <div class="col-sm-2 m-b-md">
-          <ul class="list-unstyled list-spaced">
-            <li><h4>Press</h4></li>
-            <li class="text-muted"><em>Overview</em></li>
-            <li class="text-muted"><em>Design</em></li>
-            <li class="text-muted"><em>Display</em></li>
-            <li class="text-muted"><em>Technology</em></li>
-          </ul>
-        </div>
-        <div class="col-sm-2 m-b-md">
-          <ul class="list-unstyled list-spaced">
-            <li><h4>Other</h4></li>
-            <li class="text-muted"><em>Overview</em></li>
-            <li class="text-muted"><em>Design</em></li>
-            <li class="text-muted"><em>Display</em></li>
-            <li class="text-muted"><em>Technology</em></li>
-          </ul>
-        </div>
-        <div class="col-sm-6 m-b-md">
-          <ul class="list-unstyled list-spaced">
-            <li><h4>Photography</h4></li>
-            <li class="text-muted">
-              <em>Background photos: <a href="https://www.flickr.com/photos/demxx/8702542709/">2 Chainz by demxx</a> and <a href="https://www.flickr.com/photos/carnivalridexx/6048218344/">Nicki Minaj by Jennifer</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>. <a href="https://www.flickr.com/photos/ddalledo/2204168450/">Kanye West by Daniele Dalledonne</a> is shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license<a>. <a href="https://commons.wikimedia.org/wiki/Category:Lil_Wayne#/media/File:Lil_Wayne.jpg">Lil Wayne by RJ Shaughnessy</a>, and <a href="https://www.flickr.com/photos/didy_b/8150029917">Mos Def by Eddy BERTHIER</a> are public domain works. Concert portraits: <a href="https://www.flickr.com/photos/histrionicss/13951485730">Iggy Azalea by Laura Murray</a>, <a href="https://www.flickr.com/photos/32999928@N05/7213700394/">Childish Gambino by Eli Watson</a>, and <a href="https://www.flickr.com/photos/scissorfighter/5169715083/">Kid Cudi by Dana Beveridge</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>.<a href="https://www.flickr.com/photos/jasonpersse/5710284405/"> Kanye West by Jason Persse</a> and <a href="https://www.flickr.com/photos/tamtam7683/5990345195">Nicki Minaj by tamtam7683</a> are shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</em>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
-  </body>
+
+<div class="block text-center p-b-0 p-t-md" id="two">
+  <h2>sixty characters worth of AMAZING details. Exactly. yes. ok.</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+  <img src="./img/system.png" class="w-full">
+</div>
+<div class="block">
+  <h1 class="text-center">steven needs to pick which benefits block goes here.</h1>
+</div>
+<div class="block app-testimonial block-inverse id="three"
+style="background-image: url(./img/tiredrunner.png);">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <blockquote class="pull-quote m-x-0">
+            &#8220;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.&#8221;
+            <cite class="m-t-lg">&#8212;Name, sport</cite>
+          </blockquote>
+        </div>
+      </div>
+</div>
+
+<div class="block block-inverse app-steps p-t p-b-md" id="four">
+  <div class="row text-center">
+      <h5 class="text-muted text-uppercase">how it works</h5>
+      <h2>Punchy headline that explains that this is a system yada yada yada.</h2>
+  </div>
+  <div class="row m-t-md">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
+        <img src="./img/step1.png">
+        <h4>Create a profile</h4>
+        <p>Tell us about yourself, your history, and your goals</p>
+      </div>
+      <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
+        <img src="./img/step2.png">
+        <h4>Share your DNA <em class="app-optional">(optional)</em></h4>
+        <p>A quick cheek swab lets us dig deeper into your metabolism, dietary status, and performance capabilities, if you're interested</p>
+      </div>
+      <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
+        <img src="./img/step3.png">
+        <h4>Recommendation</h4>
+        <p>We tailor a morning, post-workout and bedtime blend just for you</p>
+      </div>
+      <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
+        <img src="./img/step4.png">
+        <h4>Take daily</h4>
+        <p>With Aurena, you feel regenerated and ready to tackle your day</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block text-center p-y-lg">
+  <h1>Sign up to get early access to Aurena</h1>  
+  <button type="button" class="btn btn-primary-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+</div>
+</body>
 </html>
