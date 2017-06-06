@@ -24,50 +24,66 @@
         <div class="modal-body">
           <form id="signup-form">
             <div id="form-error" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span id="form-error-text"></span></div>
-                <div class="form-group">
-                  <label for="recipient-name" class="control-label">Email</label>
-                  <input id="email" type="email" class="form-control" id="recipient-email">
+            <div class="app-choice" style="background-image: url(./img/product-base.png)">
+              <div class="app-description">
+                <h2 class="m-t-0">&#036;199 Morning &amp; Bedtime</h2>
+                <em>for one month supply</em>
+              </div>
+            </div>
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-post.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;79 Post Workout product</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-post" name="post" autocomplete="off" > Add to order
+                  </label> 
                 </div>
-                <div class="row">
-                  <div class="col-xs-4">
-                    <img src="./img/product-base.png" class="w-full">
-                  </div>
-                  <div class="col-xs-8">
-                    <h3>$199 Morning &fix Bedtime products</h3>
-                    <em>30 day supply</em>
-                    <div class="row">
-                      <div class="col-xs-3 col-xs-offset-9">
-                        <div class="btn-group" data-toggle="buttons">
-                          <label class="btn btn-primary-outline btn-pill active">
-                            <input type="checkbox" autocomplete="off">Add to pack
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-hydrate.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;50 All-day BCAA  Hydrate Product</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-hydrate" name="post" autocomplete="off" > Add to order
+                  </label> 
                 </div>
-                
-                <div class="row">
-                  <div class="col-xs-4">
-                    <img src="./img/product-base.png" class="w-full">
-                  </div>
-                  <div class="col-xs-8">
-                    <h3>$199 Morning &fix Bedtime products</h3>
-                    <em>30 day supply</em>
-                    <div class="row">
-                      <div class="col-xs-3 col-xs-offset-9">
-                        <div class="btn-group" data-toggle="buttons">
-                          <label class="btn btn-primary-outline btn-pill active">
-                            <input type="checkbox" autocomplete="off">Add to pack
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-boosters.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;50 Genetic Boosters</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-boosters" name="post" autocomplete="off" > Add to order
+                  </label> 
                 </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
-              <input type="submit" value="Join" class="btn btn-lg btn-primary" id="sendInfoToMixpanel"></input>
+              </div>
+            </div>
+            <div class="app-choice" style="background-image: url(./img/product-dna.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;199 DNA Test</h3>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-dna" name="post" autocomplete="off" > Add to order
+                  </label> 
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-email" class="control-label">Email</label>
+              <input id="email" type="email" class="form-control" id="recipient-email">
+            </div>
+            </div>
+            <div class="modal-footer text-center">
+              <button type="button" class="btn btn-danger-outline btn-pill btn-lg" data-dismiss="modal">Close</button>
+              <input type="submit" value="Submit order" class="btn btn-primary-outline btn-pill btn-lg" id="sendInfoToMixpanel"></input>
             </div>
           </form>
       </div>
@@ -123,6 +139,7 @@ style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
 <div class="block block-inverse p-x-0 p-y-0">
   <div class="row">
     <div class="col-md-7 app-shoes hidden-xs hidden-sm">
+    <img src="./img/shoes.png" class="w-full">
     </div>
     <div class="col-md-5 app-benefits p-l-md p-y-md">
       <h4>Lorem ipsum dolor sit amet, consectetur</h2>
@@ -156,7 +173,7 @@ style="background-image: url(./img/tiredrunner.png);">
 <div class="block block-inverse app-steps p-t p-b-md" id="four">
   <div class="row text-center">
       <h5 class="text-muted text-uppercase">how it works</h5>
-      <h2>Punchy headline that explains that this is a system yada yada yada.</h2>
+      <h2 class="m-x-lg">Creating the perfectly balanced personalized nutrition package to help you maximize your potential.</h2>
       <button type="button" class="btn btn-lg btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
   </div>
   <div class="row m-t-md">
@@ -187,6 +204,23 @@ style="background-image: url(./img/tiredrunner.png);">
 <div class="block text-center p-y-lg">
   <h1>Sign up to get early access to Aurena</h1>  
   <button type="button" class="btn btn-lg btn-primary-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+</div>
+<div class="block block-inverse">
+ <div class="row">
+   <div class="col-xs-1 hidden-xs">
+     <img src="./img/logo.png" class="w-full">
+   </div>
+   <div class="col-sm-5 col-sm-offset-1">
+     <p>
+       We are a mix of performance nutrition specialists, innovation gurus, tech nerds, computational and research scientists, digital natives and communication people. A mix of triathletes, runners, gym rats, former bobsledders, amateur snowboarders, Jiu-Jitsu-ists and boardgamers. Performance means different things for all of us. But we have a common passion: to always push our boundaries, and yours. 
+     </p>
+   </div>
+   <div class="col-sm-4 p-x-lg">
+      <a href="#two" class="app-nav-item">The system</a>
+      <a href="#four" class="app-nav-item text-center m-x">About</a>
+      <a data-toggle="modal" data-target="#myModal" class="app-nav-item active">Get started</a>
+   </div> 
+ </div> 
 </div>
 </body>
 </html>
