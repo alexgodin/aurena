@@ -24,19 +24,56 @@
         <div class="modal-body">
           <form id="signup-form">
             <div id="form-error" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span id="form-error-text"></span></div>
-            <div class="app-choice">
-              <img src="./img/product-base.png">
-              <h3 class="m-t-0">&#036;199 Morning &amp; Bedtime</h3>
-              <em>for 30 day supply</em>
+            <div class="app-choice" style="background-image: url(./img/product-base.png)">
+              <div class="app-description">
+                <h2 class="m-t-0">&#036;199 Morning &amp; Bedtime</h2>
+                <em>for one month supply</em>
+              </div>
             </div>
-            <div class="app-choice">
-              <img src="./img/product-post.png">
-              <h3 class="m-t-0">&#036;79 Post Workout</h3>
-              <em>for 30 day supply</em>
-              <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
-                <label class="btn btn-primary-outline btn-pill active">
-                  <input type="checkbox" name="" autocomplete="off" > Add to order
-                </label> 
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-post.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;79 Post Workout product</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-post" name="post" autocomplete="off" > Add to order
+                  </label> 
+                </div>
+              </div>
+            </div>
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-hydrate.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;50 All-day BCAA  Hydrate Product</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-hydrate" name="post" autocomplete="off" > Add to order
+                  </label> 
+                </div>
+              </div>
+            </div>
+            <hr class="w-md m-y">
+            <div class="app-choice" style="background-image: url(./img/product-boosters.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;50 Genetic Boosters</h3>
+                <em>for one month supply</em>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-boosters" name="post" autocomplete="off" > Add to order
+                  </label> 
+                </div>
+              </div>
+            </div>
+            <div class="app-choice" style="background-image: url(./img/product-dna.png)">
+              <div class="app-description">
+                <h3 class="m-t-0">&#036;199 DNA Test</h3>
+                <div class="btn-group app-add-to-pack m-t-lg" data-toggle="buttons">
+                  <label class="btn btn-primary-outline btn-pill ">
+                    <input type="checkbox" id="add-dna" name="post" autocomplete="off" > Add to order
+                  </label> 
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -44,9 +81,9 @@
               <input id="email" type="email" class="form-control" id="recipient-email">
             </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <input type="submit" value="Join" class="btn btn-primary" id="sendInfoToMixpanel"></input>
+            <div class="modal-footer text-center">
+              <button type="button" class="btn btn-danger-outline btn-pill btn-lg" data-dismiss="modal">Close</button>
+              <input type="submit" value="Submit order" class="btn btn-primary-outline btn-pill btn-lg" id="sendInfoToMixpanel"></input>
             </div>
           </form>
       </div>
@@ -136,7 +173,7 @@ style="background-image: url(./img/tiredrunner.png);">
 <div class="block block-inverse app-steps p-t p-b-md" id="four">
   <div class="row text-center">
       <h5 class="text-muted text-uppercase">how it works</h5>
-      <h2>Punchy headline that explains that this is a system yada yada yada.</h2>
+      <h2 class="m-x-lg">Creating the perfectly balanced personalized nutrition package to help you maximize your potential.</h2>
       <button type="button" class="btn btn-lg btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
   </div>
   <div class="row m-t-md">
