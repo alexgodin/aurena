@@ -59,8 +59,8 @@ body {
   color: #000000;
 }
 
-h3, h4, h5 {
-  font-weight: 300;
+.app-nav-item {
+  float: right;
 }
 
 nav a,
@@ -78,8 +78,26 @@ a:visited{
   text-align: left;
 }
 
+.block {
+  padding-left: @spacer-x;
+  padding-right: @spacer-x;
+}
+
+// .app-choice {
+// }
+
+// .app-choice img{
+//   float: left;
+//   width: 150px;
+// }
+
+.btn-group {
+  float:right;
+}
+
 .app-steps {
   background-image: linear-gradient(-221deg, #0057B8 36%, #59CBE8 100%);
+ /* Rectangle 4: */
 }
 
 .app-down {
@@ -95,42 +113,53 @@ a:visited{
   margin-bottom: @spacer-y;
 }
 
+.app-shoes {
+  height:inherit;
+  background-image: url(./img/shoes.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
 .app-optional {
   font-size: @font-size-base;
 }
 
-input[type=checkbox].dna-checkbox{
-              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
-            }
+// input[type=checkbox].dna-checkbox{
+//               position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+//             }
 
-            input[type=checkbox].dna-checkbox + label.dna-label {
-              padding-left:29px;
-              height:24px; 
-              display:inline-block;
-              background-repeat:no-repeat;
-              background-position: 0 0;
-              vertical-align:middle;
-              cursor:pointer;
+//             input[type=checkbox].dna-checkbox + label.dna-label {
+//               padding-left:29px;
+//               height:24px; 
+//               display:inline-block;
+//               background-repeat:no-repeat;
+//               background-position: 0 0;
+//               vertical-align:middle;
+//               cursor:pointer;
 
-            }
+//             }
 
-            input[type=checkbox].dna-checkbox:checked + label.dna-label {
-              background-position: 0 -24px;
-            }
-            label.dna-label {
-        background-image:url(./img/checkbox.png);
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+//             input[type=checkbox].dna-checkbox:checked + label.dna-label {
+//               background-position: 0 -24px;
+//             }
+//             label.dna-label {
+//         background-image:url(./img/checkbox.png);
+//         -webkit-touch-callout: none;
+//         -webkit-user-select: none;
+//         -khtml-user-select: none;
+//         -moz-user-select: none;
+//         -ms-user-select: none;
+//         user-select: none;
+//       }
 
-.dna-label {
-  font-weight: 300;
-  font-size: @font-size-base;
-}
+// .dna-label {
+//   font-weight: 300;
+//   font-size: @font-size-base;
+// }
 
 // /*
 //  * Bold Application level overrides

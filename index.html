@@ -19,27 +19,55 @@
       <div class="modal-content">
         <div class="modal-header text-center">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h1><span class="h4">&#036;</span>100<span class="h4">/mo</span></h1>
-          <h3 class="m-t-0">Get started with this special limited time offer.</h3>
+          <h1 class="m-t-0">Get started with this special limited time offer.</h1>
         </div>
         <div class="modal-body">
           <form id="signup-form">
             <div id="form-error" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span id="form-error-text"></span></div>
                 <div class="form-group">
-                  <label for="recipient-name" class="control-label">Name</label>
-                  <input id="name" type="text" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
                   <label for="recipient-name" class="control-label">Email</label>
                   <input id="email" type="email" class="form-control" id="recipient-email">
                 </div>
-                <div class="form-group">
-                 <input type="checkbox" name="dna" class="dna-checkbox" id="dna"> <label for="dna" class="dna-label">Please personalize my nutrition with a DNA test and boosters.<br><em>(additional $50)</em></label>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <img src="./img/product-base.png" class="w-full">
+                  </div>
+                  <div class="col-xs-8">
+                    <h3>$199 Morning &fix Bedtime products</h3>
+                    <em>30 day supply</em>
+                    <div class="row">
+                      <div class="col-xs-3 col-xs-offset-9">
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary-outline btn-pill active">
+                            <input type="checkbox" autocomplete="off">Add to pack
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                
+                <div class="row">
+                  <div class="col-xs-4">
+                    <img src="./img/product-base.png" class="w-full">
+                  </div>
+                  <div class="col-xs-8">
+                    <h3>$199 Morning &fix Bedtime products</h3>
+                    <em>30 day supply</em>
+                    <div class="row">
+                      <div class="col-xs-3 col-xs-offset-9">
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary-outline btn-pill active">
+                            <input type="checkbox" autocomplete="off">Add to pack
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <input type="submit" value="Join" class="btn btn-primary" id="sendInfoToMixpanel"></input>
+              <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
+              <input type="submit" value="Join" class="btn btn-lg btn-primary" id="sendInfoToMixpanel"></input>
             </div>
           </form>
       </div>
@@ -55,17 +83,13 @@
 <div class="block block-inverse app-header p-t-0"
 style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/runningman.png);">
   <nav class="navbar navbar-transparent p-t m-b-0">
-    <div class="col-xs-1 p-r-lg hidden-xs">  
+    <div class="col-xs-1 hidden-xs">  
       <img src="./img/logo.png" width="50px">
     </div>
-    <div class="col-xs-1 col-xs-offset-7 text-center visible-lg">
-      <a href="#two" class="text-uppercase">The system</a>
-    </div>
-    <div class="col-xs-1  text-center visible-lg">
-      <a href="#four" class="text-uppercase">About</a>
-    </div>
-    <div class="col-xs-1 text-center visible-lg">
-      <a data-toggle="modal" data-target="#myModal" class="text-uppercase">Get started</a>
+    <div class="col-xs-11 text-uppercase hidden-xs p-r">
+      <a href="#two" class="app-nav-item m-x">The system</a>
+      <a href="#four" class="app-nav-item m-x">About</a>
+      <a data-toggle="modal" data-target="#myModal" class="app-nav-item m-x">Get started</a>
     </div>
   </nav>
   <div class="row text-center m-b-lg m-t-md">
@@ -77,7 +101,7 @@ style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
       </div>
       <h1>This is a five word headline.</h1>
       <p class="lead">This is a one hundred and thirty-five character subhead. It talks about how there's no whey our protein is so good. You'll love it.</p>
-      <button type="button" class="btn btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+      <button type="button" class="btn btn-lg btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
     </div>
   </div> 
   <div class="app-down">
@@ -87,19 +111,41 @@ style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
   </div>
 </div>
 
-<div class="block text-center p-b-0 p-t-md" id="two">
-  <h2>sixty characters worth of AMAZING details. Exactly. yes. ok.</h2>
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-  <img src="./img/system.png" class="w-full">
+<div class="block text-center p-b-0 p-t-md p-x-0" id="two">
+  <div class="p-x">
+    <h2>sixty characters worth of AMAZING details. Exactly. yes. ok.</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+    <button type="button" class="btn btn-lg btn-primary-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+  </div>
+  <img src="./img/system.png" class="w-full hidden-xs">
+  <img src="./img/system-mobile.png" class="w-full visible-xs">
 </div>
-<div class="block">
-  <h1 class="text-center">steven needs to pick which benefits block goes here.</h1>
+<div class="block block-inverse p-x-0 p-y-0">
+  <div class="row">
+    <div class="col-md-7 app-shoes hidden-xs hidden-sm">
+    </div>
+    <div class="col-md-5 app-benefits p-l-md p-y-md">
+      <h4>Lorem ipsum dolor sit amet, consectetur</h2>
+      <ul class="list-unstyled w-lg">
+        <li class="m-y lead">
+        tempor incididunt ut labore et dolore magna aliqua ut
+        </li>
+        <li class="m-y lead">
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        </li>
+        <li class="m-y lead">
+        quis nostrud exercitation ullamco laboris nisi ut aliquip
+        </li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-info-outline btn-pill m-t" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+    </div>
+  </div>
 </div>
-<div class="block app-testimonial block-inverse id="three"
+<div class="block app-testimonial block-inverse p-l p-r-lg" id="three"
 style="background-image: url(./img/tiredrunner.png);">
       <div class="row">
         <div class="col-md-5 col-md-offset-1">
-          <blockquote class="pull-quote m-x-0">
+          <blockquote class="pull-quote m-x-0 h3">
             &#8220;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.&#8221;
             <cite class="m-t-lg">&#8212;Name, sport</cite>
           </blockquote>
@@ -111,35 +157,36 @@ style="background-image: url(./img/tiredrunner.png);">
   <div class="row text-center">
       <h5 class="text-muted text-uppercase">how it works</h5>
       <h2>Punchy headline that explains that this is a system yada yada yada.</h2>
+      <button type="button" class="btn btn-lg btn-info-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
   </div>
   <div class="row m-t-md">
     <div class="col-sm-10 col-sm-offset-1">
       <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
         <img src="./img/step1.png">
         <h4>Create a profile</h4>
-        <p>Tell us about yourself, your history, and your goals</p>
+        <p class="lead">Tell us about yourself, your history, and your goals</p>
       </div>
       <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
         <img src="./img/step2.png">
         <h4>Share your DNA <em class="app-optional">(optional)</em></h4>
-        <p>A quick cheek swab lets us dig deeper into your metabolism, dietary status, and performance capabilities, if you're interested</p>
+        <p class="lead">A quick cheek swab lets us dig deeper into your metabolism, dietary status, and performance capabilities, if you're interested</p>
       </div>
       <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
         <img src="./img/step3.png">
         <h4>Recommendation</h4>
-        <p>We tailor a morning, post-workout and bedtime blend just for you</p>
+        <p class="lead">We tailor a morning, post-workout and bedtime blend just for you</p>
       </div>
       <div class="app-step col-sm-3 p-x p-b m-b-md text-center">
         <img src="./img/step4.png">
         <h4>Take daily</h4>
-        <p>With Aurena, you feel regenerated and ready to tackle your day</p>
+        <p class="lead">With Aurena, you feel regenerated and ready to tackle your day</p>
       </div>
     </div>
   </div>
 </div>
 <div class="block text-center p-y-lg">
   <h1>Sign up to get early access to Aurena</h1>  
-  <button type="button" class="btn btn-primary-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
+  <button type="button" class="btn btn-lg btn-primary-outline btn-pill" data-toggle="modal" data-target="#myModal" data-whatever="">Action text</button>
 </div>
 </body>
 </html>
