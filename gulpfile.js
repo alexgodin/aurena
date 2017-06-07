@@ -1,4 +1,5 @@
 var gulp         = require('gulp')
+var debug        = require('gulp-debug');
 var path         = require('path')
 var less         = require('gulp-less')
 var autoprefixer = require('gulp-autoprefixer')
@@ -10,18 +11,24 @@ var uglify       = require('gulp-uglify')
 var connect      = require('gulp-connect')
 var open         = require('gulp-open')
 var ghPages      = require('gulp-gh-pages');
+var Handlebars   = require('handlebars');
+var _            = require('lodash');
+const fs = require('fs');
+
 
 var Paths = {
-  IMG                  : './img/**',
-  FONTS                : './fonts/**',
+  IMG                  : 'img/**',
+  FONTS                : 'fonts/**',
   HERE                 : './',
-  HTML                 : './*.html',
+  HTML                 : '*.html',
   TO_GH_PAGES          : './dist/**/**',
+  TEMPLATE             : "./templating/template.html", 
+  CONTENT              : "./templating/content.json", 
   DIST                 : 'dist',
   DIST_IMG             : 'dist/img',
   DIST_FONTS           : 'dist/fonts',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
-  LESS                 : './less/**/**',
+  LESS                 : 'less/**/**',
   TOOLKIT_JS           : [
       './js/bootstrap/transition.js',
       './js/bootstrap/alert.js',
@@ -72,6 +79,29 @@ gulp.task('html', function () {
 })
 
 //***************//
+//DEAL WITH TEMPLATES
+//***************//
+
+gulp.task('template', function () {
+
+  var template = Handlebars.compile(fs.readFileSync('./templating/template.html').toString());
+  var contexts = JSON.parse(fs.readFileSync('./templating/content.json'));
+
+  _.forEach(contexts, function(context) {
+    console.log(context)
+    fs.writeFile(
+      "./dist/"+context.filename,
+      template(context.body),
+      function(err) {
+        if(err) {
+          return console.log(err);
+        } 
+        console.log("created landing page "+context.filename);
+      }); 
+  });
+})
+
+//***************//
 //DEAL WITH JS
 //***************//
 
@@ -104,19 +134,6 @@ gulp.task('less', function () {
 })
 
 
-// gulp.task('less-min', ['less'], function () {
-//   return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
-//     .pipe(sourcemaps.init())
-//     .pipe(less())
-//     .pipe(minifyCSS())
-//     .pipe(autoprefixer())
-//     .pipe(rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(sourcemaps.write(Paths.HERE))
-//     .pipe(gulp.dest(Paths.DIST))
-// })
-
 gulp.task('server', function () {
   connect.server({
     root: './dist',
@@ -124,15 +141,6 @@ gulp.task('server', function () {
     livereload: true
   })
 })
-
-// gulp.task('js-min', ['js'], function () {
-//   return gulp.src(Paths.DIST_TOOLKIT_JS)
-//     .pipe(uglify())
-//     .pipe(rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(gulp.dest(Paths.DIST))
-// })
 
 gulp.task('deploy',function() {
     return gulp.src(Paths.TO_GH_PAGES)

@@ -86,7 +86,7 @@ a:visited{
 @app-choice-size: 150px;
 
 .app-description {
-  margin-left: @app-choice-size*.8;
+  margin-left: @app-choice-size*.9;
 }
 
 .app-choice {
@@ -138,3 +138,37 @@ hr {
   font-size: @font-size-base;
 }
 
+input[type=checkbox].app-checkbox{
+              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+            }
+
+            input[type=checkbox].app-checkbox + label.app-label {
+              padding-left:29px;
+              height:24px; 
+              display:inline-block;
+              background-repeat:no-repeat;
+              background-position: 0 0;
+              vertical-align:middle;
+              cursor:pointer;
+
+            }
+
+            input[type=checkbox].app-checkbox:checked + label.app-label {
+              background-position: 0 -24px;
+            }
+            label.app-label {
+        background-image:url(./img/checkbox.png);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+.app-dna-scrip {
+  float:left;
+}
+.app-dna-image {
+  float:right;
+  width: 25px;
+}
