@@ -25,6 +25,7 @@ var Paths = {
   TEMPLATE             : "./templating/template.html", 
   CONTENT              : "./templating/content.json", 
   DIST                 : 'dist',
+  CNAME                 : 'CNAME',
   DIST_IMG             : 'dist/img',
   DIST_FONTS           : 'dist/fonts',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
@@ -47,7 +48,7 @@ var Paths = {
   CUSTOM_JS          : 'js/custom/*'
 }
 
-gulp.task('default', ['less', 'js', 'html', 'img','fonts'])
+gulp.task('default', ['less', 'js', 'html', 'img','fonts','CNAME'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less']);
@@ -55,6 +56,7 @@ gulp.task('watch', function () {
   gulp.watch(Paths.TOOLKIT_JS, ['toolkit-js']);
   gulp.watch(Paths.HTML, ['html']);
   gulp.watch(Paths.IMG, ['img']);
+  gulp.watch(Paths.CNAME, ['cname']);
 })
 
 //***************//
@@ -77,6 +79,12 @@ gulp.task('html', function () {
   return gulp.src(Paths.HTML)
     .pipe(gulp.dest(Paths.DIST))
 })
+
+gulp.task('cname', function () {
+  return gulp.src(Paths.CNAME)
+    .pipe(gulp.dest(Paths.DIST))
+})
+
 
 //***************//
 //DEAL WITH TEMPLATES
