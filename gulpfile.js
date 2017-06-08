@@ -48,7 +48,7 @@ var Paths = {
   CUSTOM_JS          : 'js/custom/*'
 }
 
-gulp.task('default', ['less', 'js', 'html', 'img','fonts','CNAME'])
+gulp.task('default', ['less', 'js', 'html', 'img','fonts','cname'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less']);
