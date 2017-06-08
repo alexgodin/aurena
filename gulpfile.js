@@ -44,15 +44,15 @@ var Paths = {
       './js/bootstrap/tab.js',
       './js/toolkit/*'
     ],
-    CUSTOM_JS          : './js/custom/*'
+  CUSTOM_JS          : 'js/custom/*'
 }
 
 gulp.task('default', ['less', 'js', 'html', 'img','fonts'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less']);
-  gulp.watch(Paths.CUSTOM_JS,   ['toolkit-js']);
-  gulp.watch(Paths.TOOLKIT_JS,   ['custom-js']);
+  gulp.watch(Paths.CUSTOM_JS, ['custom-js']);
+  gulp.watch(Paths.TOOLKIT_JS, ['toolkit-js']);
   gulp.watch(Paths.HTML, ['html']);
   gulp.watch(Paths.IMG, ['img']);
 })

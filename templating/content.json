@@ -2,7 +2,7 @@
   "regeneration": {
     "filename":"re.html",
     "body":{
-      "headimg": "runningman.png",
+      "headerimg": "active_m_test1.png",
       "headline": "Regenerate, don't just recover.",
       "subhead": "We all know the magic happens when the lights go out. Rebuild and repair during sleep and throughout the day.",
       "details": "Maximize the regenerative capabilities of your body.",
@@ -19,7 +19,7 @@
   "ingredients": {
     "filename":"in.html",
     "body": {
-      "headimg": "runningman.png",
+      "headerimg": "active_m_test1.png",
       "headline": "Don't settle for inferior ingredients.",
       "subhead": "You spend time and energy working out. Recuperate with top shelf ingredients that promote recovery and optimize performance.",
       "details": "Premium performance nutrition designed by scientists.",
@@ -36,7 +36,7 @@
   "personalization": {
     "filename":"pe.html",
     "body": {
-      "headimg": "runningman.png",
+      "headerimg": "active_m_test1.png",
       "headline": "Listen to your body.",
       "subhead": "We understand that every body is different. Perform better with the first sports nutrition system tailored to your exact needs.",
       "details": "Custom solutions for your unique biology.",
@@ -53,7 +53,7 @@
   "youth": {
     "filename":"yo.html",
     "body": {
-      "headimg": "runningman.png",
+      "headerimg": "active_m_test1.png",
       "headline": "Bounce back stronger than ever.",
       "subhead": "You put your body to the test every day. When a good night's sleep just doesn't cut it. Let us help you bounce back like you're 18 again.",
       "details": "Repair and rebuild naturally.",
@@ -66,5 +66,141 @@
       "testimonial":"I used to take two asprin and water before bed and hope for the best. Now when I wake up on Aurena,  I feel totally recuperated after a rough day.",
       "name": "Steven, Triathlete"
     }
+  },
+  "regeneration-female": {
+    "filename":"ref.html",
+    "body":{
+      "headerimg": "active_female2.png",
+      "headline": "Regenerate, don't just recover.",
+      "subhead": "We all know the magic happens when the lights go out. Rebuild and repair during sleep and throughout the day.",
+      "details": "Maximize the regenerative capabilities of your body.",
+      "details-expanded": "Aurena's personalized nutrition system helps high performers regenerate and feel their best every day.",
+      "benefits-head": "Let your body regenerate.",
+      "benefits-one": "Rebuild muscle and reduce joint stiffness.",
+      "benefits-two": "Increase focus, mental sharpness and sleep quality.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "tiredrunner.png",
+      "testimonial": "While I'm sleeping I know I'm getting slow drips of protein that's released into my body. And so when I wake up in the morning I just feel so much more energized.",
+      "name": "David, Triathlete"
+    }
+  },
+  "ingredients-female": {
+    "filename":"inf.html",
+    "body": {
+      "headerimg": "active_female2.png",
+      "headline": "Don't settle for inferior ingredients.",
+      "subhead": "You spend time and energy working out. Recuperate with top shelf ingredients that promote recovery and optimize performance.",
+      "details": "Premium performance nutrition designed by scientists.",
+      "details-expanded": "The world’s most intelligent and exclusive personal nutrition system for high performers.",
+      "benefits-head": "Better sports nutrition.",
+      "benefits-one": "Uncompromisingly clean formulations of ingredients with synergistic effects.",
+      "benefits-two": "Research backed, clinical doses for effectiveness.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "tiredrunner.png",
+      "testimonial": "I know I'm taking in some clean ingredients. If there's like a long list of ingredients, I steer away from it. It's the unknown that worries me.",
+      "name": "Olivia, Cyclist"
+    }
+  },
+  "personalization-female": {
+    "filename":"pef.html",
+    "body": {
+      "headerimg": "active_female2.png",
+      "headline": "Listen to your body.",
+      "subhead": "We understand that every body is different. Perform better with the first sports nutrition system tailored to your exact needs.",
+      "details": "Custom solutions for your unique biology.",
+      "details-expanded": "The world’s most intelligent and exclusive personal nutrition system for high performers.",
+      "benefits-head": "Sports nutrition designed for you.",
+      "benefits-one": "Tailored to who you are, what you do and where you live.",
+      "benefits-two": "Our proprietary system recommends boosters to supplement your deficiencies.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "tiredrunner.png",
+      "testimonial":"As far as nutrition is concerned, it's really very independent. Certain products mix better with certain people. Genetic boosters is a no-brainer.",
+      "name": "Brian, Coach to Endurance Athletes"
+    }
+  },
+  "youth-female": {
+    "filename":"yof.html",
+    "body": {
+      "headerimg": "active_female2.png",
+      "headline": "Bounce back stronger than ever.",
+      "subhead": "You put your body to the test every day. When a good night's sleep just doesn't cut it. Let us help you bounce back like you're 18 again.",
+      "details": "Repair and rebuild naturally.",
+      "details-expanded": "Aurena's intelligent sports nutrition system helps you recharge and get ready for the next challenge.",
+      "benefits-head": "Feel better.",
+      "benefits-one": "Restore cellular integrity, structure and function.",
+      "benefits-two": "Sleep soundly and wake up a new person every morning.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "tiredrunner.png",
+      "testimonial":"I used to take two asprin and water before bed and hope for the best. Now when I wake up on Aurena,  I feel totally recuperated after a rough day.",
+      "name": "Steven, Triathlete"
+    }
+  },
+  "regeneration-aging": {
+    "filename":"rea.html",
+    "body":{
+      "headerimg": "aging_test2.png",
+      "headline": "Regenerate, don't just recover.",
+      "subhead": "We all know the magic happens when the lights go out. Rebuild and repair during sleep and throughout the day.",
+      "details": "Maximize the regenerative capabilities of your body.",
+      "details-expanded": "Aurena's personalized nutrition system helps high performers regenerate and feel their best every day.",
+      "benefits-head": "Let your body regenerate.",
+      "benefits-one": "Rebuild muscle and reduce joint stiffness.",
+      "benefits-two": "Increase focus, mental sharpness and sleep quality.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "aging_athlete1.png",
+      "testimonial": "While I'm sleeping I know I'm getting slow drips of protein that's released into my body. And so when I wake up in the morning I just feel so much more energized.",
+      "name": "David, Triathlete"
+    }
+  },
+  "ingredients-aging": {
+    "filename":"ina.html",
+    "body": {
+      "headerimg": "aging_test2.png",
+      "headline": "Don't settle for inferior ingredients.",
+      "subhead": "You spend time and energy working out. Recuperate with top shelf ingredients that promote recovery and optimize performance.",
+      "details": "Premium performance nutrition designed by scientists.",
+      "details-expanded": "The world’s most intelligent and exclusive personal nutrition system for high performers.",
+      "benefits-head": "Better sports nutrition.",
+      "benefits-one": "Uncompromisingly clean formulations of ingredients with synergistic effects.",
+      "benefits-two": "Research backed, clinical doses for effectiveness.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "aging_athlete1.png",
+      "testimonial": "I know I'm taking in some clean ingredients. If there's like a long list of ingredients, I steer away from it. It's the unknown that worries me.",
+      "name": "Olivia, Cyclist"
+    }
+  },
+  "personalization-aging": {
+    "filename":"pea.html",
+    "body": {
+      "headerimg": "aging_test2.png",
+      "headline": "Listen to your body.",
+      "subhead": "We understand that every body is different. Perform better with the first sports nutrition system tailored to your exact needs.",
+      "details": "Custom solutions for your unique biology.",
+      "details-expanded": "The world’s most intelligent and exclusive personal nutrition system for high performers.",
+      "benefits-head": "Sports nutrition designed for you.",
+      "benefits-one": "Tailored to who you are, what you do and where you live.",
+      "benefits-two": "Our proprietary system recommends boosters to supplement your deficiencies.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "aging_athlete1.png",
+      "testimonial":"As far as nutrition is concerned, it's really very independent. Certain products mix better with certain people. Genetic boosters is a no-brainer.",
+      "name": "Brian, Coach to Endurance Athletes"
+    }
+  },
+  "youth-aging": {
+    "filename":"yoa.html",
+    "body": {
+      "headerimg": "aging_test2.png",
+      "headline": "Bounce back stronger than ever.",
+      "subhead": "You put your body to the test every day. When a good night's sleep just doesn't cut it. Let us help you bounce back like you're 18 again.",
+      "details": "Repair and rebuild naturally.",
+      "details-expanded": "Aurena's intelligent sports nutrition system helps you recharge and get ready for the next challenge.",
+      "benefits-head": "Feel better.",
+      "benefits-one": "Restore cellular integrity, structure and function.",
+      "benefits-two": "Sleep soundly and wake up a new person every morning.",
+      "benefits-three": "Compounds easily absorbed and readily available to the body.",
+      "testimonialimg": "aging_athlete1.png",
+      "testimonial":"I used to take two asprin and water before bed and hope for the best. Now when I wake up on Aurena,  I feel totally recuperated after a rough day.",
+      "name": "Steven, Triathlete"
+    }
   }
-}
+  }
