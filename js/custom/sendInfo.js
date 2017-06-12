@@ -17,6 +17,12 @@ mixpanel.init(mixpanel_id);
 // PUT YOUR MIXPANEL ID RIGHT UP THERE :)
 
 $( document ).ready(function() {
+	mixpanel.track("page_load");
+
+	$('#myModal').on('shown.bs.modal',function() {
+		mixpanel.track("modal_open");
+	});
+
 	$('#signup-form').submit(function(event) {
 		// prevent default browser behaviour
   		event.preventDefault();
