@@ -42,6 +42,7 @@ $( document ).ready(function() {
         "$product-boosters":$('#boosters').is(':checked').toString(),
         "$product-dna":$('#dna').is(':checked').toString()
 	    });
+	    mixpanel.track('order');
 			fbq('track', 'AddToCart', {
 				value: 199,
 				currency: 'USD'
