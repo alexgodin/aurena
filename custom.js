@@ -40,7 +40,8 @@ $( document ).ready(function() {
         "$product-recovery":$('#recovery').is(':checked').toString(),
         "$product-hydrate":$('#hydrate').is(':checked').toString(),
         "$product-boosters":$('#boosters').is(':checked').toString(),
-        "$product-dna":$('#dna').is(':checked').toString()
+        "$product-dna":$('#dna').is(':checked').toString(),
+        "$page":window.location.href
 	    });
 	    mixpanel.track('order');
 			fbq('track', 'AddToCart', {
